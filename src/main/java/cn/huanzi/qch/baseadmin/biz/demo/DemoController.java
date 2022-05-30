@@ -25,4 +25,15 @@ public class DemoController {
         return modelAndView;
     }
 
+    @GetMapping("t2")
+    public ModelAndView t2(){
+        ModelAndView modelAndView = new ModelAndView("demo/t2");
+        //系统信息
+        modelAndView.addObject("sys", SysSettingUtil.getSysSetting());
+        //后端公钥
+        String publicKey = RsaUtil.getPublicKey();
+        modelAndView.addObject("publicKey", publicKey);
+        return modelAndView;
+    }
+
 }
