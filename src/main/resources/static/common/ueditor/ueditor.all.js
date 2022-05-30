@@ -27207,11 +27207,11 @@ UE.ui = baidu.editor.ui = {};
 //
 //                            if( browser.ie ) {
 //
-//                                var timer = window.setInterval(function(){
+//                                var scheduler = window.setInterval(function(){
 //
 //                                    if( iframeWindow.document && iframeWindow.document.body ) {
-//                                        window.clearInterval( timer );
-//                                        timer = null;
+//                                        window.clearInterval( scheduler );
+//                                        scheduler = null;
 //                                        domUtils.on( iframeWindow.document.body, !browser.gecko ? "mousewheel" : "DOMMouseScroll", function(e){
 //                                            domUtils.preventDefault(e);
 //                                        } );

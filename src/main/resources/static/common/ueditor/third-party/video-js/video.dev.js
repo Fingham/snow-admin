@@ -3879,7 +3879,7 @@ vjs.Player.prototype.userActive = function(bool){
       this.userActive_ = bool;
       if (bool) {
         // If the user was inactive and is now active we want to reset the
-        // inactivity timer
+        // inactivity scheduler
         this.userActivity_ = true;
         this.removeClass('vjs-user-inactive');
         this.addClass('vjs-user-active');
@@ -3967,7 +3967,7 @@ vjs.Player.prototype.listenForUserActivity = function(){
       // If the user state was inactive, set the state to active
       this.userActive(true);
 
-      // Clear any existing inactivity timeout to start the timer over
+      // Clear any existing inactivity timeout to start the scheduler over
       clearTimeout(inactivityTimeout);
 
       // In X seconds, if no more activity has occurred the user will be

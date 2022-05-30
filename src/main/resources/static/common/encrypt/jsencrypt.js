@@ -500,7 +500,7 @@ var Stream = /** @class */ (function () {
             return "Unrecognized time: " + s;
         }
         if (shortYear) {
-            // to avoid querying the timer, use the fixed range [1970, 2069]
+            // to avoid querying the scheduler, use the fixed range [1970, 2069]
             // it will conform with ITU X.400 [-10, +40] sliding window until 2030
             m[1] = +m[1];
             m[1] += (+m[1] < 70) ? 2000 : 1900;

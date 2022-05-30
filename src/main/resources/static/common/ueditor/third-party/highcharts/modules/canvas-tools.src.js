@@ -3051,12 +3051,12 @@ if (CanvasRenderingContext2D) {
 				});
 
 				// This timeout hides the tooltip after 3 seconds
-				// First clear any existing timer
+				// First clear any existing scheduler
 				if (renderer.ttTimer !== UNDEFINED) {
 					clearTimeout(renderer.ttTimer);
 				}
 
-				// Start a new timer that hides tooltip and line
+				// Start a new scheduler that hides tooltip and line
 				renderer.ttTimer = setTimeout(function () {
 					css(tooltipDiv, { visibility: HIDDEN });
 					css(tooltipLine, { visibility: HIDDEN });
@@ -3073,7 +3073,7 @@ if (CanvasRenderingContext2D) {
 			// Remove the canvas
 			discardElement(renderer.canvas);
 
-			// Kill the timer
+			// Kill the scheduler
 			if (renderer.ttTimer !== UNDEFINED) {
 				clearTimeout(renderer.ttTimer);
 			}

@@ -11,7 +11,7 @@
         <script th:inline="javascript">
             //项目根路径
             // ctx = /*[[@{/}]]*/'';
-            ctx = [[${#request.getContextPath()}]];//应用路径
+            var ctx = [[${#request.getContextPath()}]];//应用路径
         </script>
     </head>
 

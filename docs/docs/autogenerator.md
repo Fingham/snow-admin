@@ -191,13 +191,15 @@ private String create() {
 　　AutoGeneratorPlus，2.0版本升级了，设置了模板文件、文件内容的字符串从模板读取，再根据关键字替换参数，最后再输出到创建的文件中，这个版本就比较好理解，大部分的代码生成器也都这样干 <br/>
 　　需要先定义模板文件（文件名后缀无所谓，自己随便定义），拿entity来举例 <br/>
 ![](https://img2020.cnblogs.com/blog/1353055/202106/1353055-20210624164719134-1551634365.png)  <br/>
+
 ```java
-package cn.huanzi.qch.baseadmin.sys.${entityToLowerCase}.pojo;
+package cn.huanzi.qch.baseadmin.biz.sys.$
+
+{entityToLowerCase}.pojo;
 
 import lombok.Data;
+
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Date;
 
 /**
  * ${tableComment} 实体类
@@ -208,13 +210,15 @@ import java.util.Date;
 @Entity
 @Table(name = "${tableName}")
 @Data
-public class ${entity} implements Serializable {
-  #for
-    #ifPri
-    #ifAutoIncrement
-    private ${tableInfo.dataType} ${tableInfo.columnName};//${tableInfo.columnComment}
-  #end
-}
+public class $ {
+    entity
+} implements Serializable{
+        #for
+        #ifPri
+        #ifAutoIncrement
+private ${tableInfo.dataType}${tableInfo.columnName};//${tableInfo.columnComment}
+        #end
+        }
 ```
 　　${}，用于取参数，替换成我们的值 <br/>
 　　#for、#if，循环遍历表字段以及判断是否为主键、是否主键自增 <br/>
