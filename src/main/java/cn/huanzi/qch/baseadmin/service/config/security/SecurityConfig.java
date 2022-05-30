@@ -58,13 +58,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             "/logout",
             "/loginPage",
             "/favicon.ico",
-            "/combase/**",
+            "/common/**",
             "/webjars/**",
             "/getVerifyCodeImage",
             "/error/*",
-            "/static/*",
-            "/fjh/*",
-            "/common/*",
+            "/demo/*",
             "/openApi/*"
     };
 
@@ -79,51 +77,51 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-//        http
-//                // 关闭csrf防护
-//                .csrf().disable()
-//                .headers().frameOptions().disable()
-//                .and();
-//
-//        http
-//                //登录处理
-//                .addFilterBefore(captchaFilterConfig, UsernamePasswordAuthenticationFilter.class)
-//                .formLogin()
-//                .loginProcessingUrl("/login")
-//                //未登录时默认跳转页面
-//                .loginPage("/loginPage")
-//                .failureHandler(loginFailureHandlerConfig)
-//                .successHandler(loginSuccessHandlerConfig)
-//                .permitAll()
-//                .and();
-//        http
-//                //登出处理
-//                .logout()
-//                .addLogoutHandler(logoutHandlerConfig)
-//                .logoutUrl("/logout")
-//                .logoutSuccessUrl("/loginPage")
-//                .permitAll()
-//                .and();
-//        http
-//                //定制url访问权限，动态权限读取，参考：https://www.jianshu.com/p/0a06496e75ea
-//                .addFilterAfter(dynamicallyUrlInterceptor(), FilterSecurityInterceptor.class)
-//                .authorizeRequests()
-//
-//                //无需权限访问
-//                .antMatchers(MATCHERS_PERMITALL_URL).permitAll()
-//
-//                //其他接口需要登录后才能访问
-//                .anyRequest().authenticated()
-//                .and();
-//
-//        http
-//                //开启记住我
-//                .rememberMe()
-//                .tokenValiditySeconds(604800)//七天免登陆
-//                .tokenRepository(persistentTokenRepository())
-//                .userDetailsService(userDetailsServiceImpl)
-//                .rememberMeServices(myPersistentTokenBasedRememberMeServices())
-//                .and();
+        http
+                // 关闭csrf防护
+                .csrf().disable()
+                .headers().frameOptions().disable()
+                .and();
+
+        http
+                //登录处理
+                .addFilterBefore(captchaFilterConfig, UsernamePasswordAuthenticationFilter.class)
+                .formLogin()
+                .loginProcessingUrl("/login")
+                //未登录时默认跳转页面
+                .loginPage("/loginPage")
+                .failureHandler(loginFailureHandlerConfig)
+                .successHandler(loginSuccessHandlerConfig)
+                .permitAll()
+                .and();
+        http
+                //登出处理
+                .logout()
+                .addLogoutHandler(logoutHandlerConfig)
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/loginPage")
+                .permitAll()
+                .and();
+        http
+                //定制url访问权限，动态权限读取，参考：https://www.jianshu.com/p/0a06496e75ea
+                .addFilterAfter(dynamicallyUrlInterceptor(), FilterSecurityInterceptor.class)
+                .authorizeRequests()
+
+                //无需权限访问
+                .antMatchers(MATCHERS_PERMITALL_URL).permitAll()
+
+                //其他接口需要登录后才能访问
+                .anyRequest().authenticated()
+                .and();
+
+        http
+                //开启记住我
+                .rememberMe()
+                .tokenValiditySeconds(604800)//七天免登陆
+                .tokenRepository(persistentTokenRepository())
+                .userDetailsService(userDetailsServiceImpl)
+                .rememberMeServices(myPersistentTokenBasedRememberMeServices())
+                .and();
     }
 
     @Bean

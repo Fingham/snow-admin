@@ -49,17 +49,6 @@ class IndexController {
     @Value("${server.port}")
     private String port;
 
-    @GetMapping("fjh")
-    public ModelAndView fjh(){
-        ModelAndView modelAndView = new ModelAndView("fjh");
-        //系统信息
-        modelAndView.addObject("sys", SysSettingUtil.getSysSetting());
-        //后端公钥
-        String publicKey = RsaUtil.getPublicKey();
-        modelAndView.addObject("publicKey", publicKey);
-        return modelAndView;
-    }
-
     /**
      * 跳转登录页面
      */
