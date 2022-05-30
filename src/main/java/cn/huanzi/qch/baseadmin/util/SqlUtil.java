@@ -3,7 +3,7 @@ package cn.huanzi.qch.baseadmin.util;
 import cn.huanzi.qch.baseadmin.annotation.Between;
 import cn.huanzi.qch.baseadmin.annotation.In;
 import cn.huanzi.qch.baseadmin.annotation.Like;
-import cn.huanzi.qch.baseadmin.common.pojo.PageCondition;
+import cn.huanzi.qch.baseadmin.combase.pojo.PageCondition;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanWrapper;

@@ -58,7 +58,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             "/logout",
             "/loginPage",
             "/favicon.ico",
-            "/common/**",
+            "/combase/**",
             "/webjars/**",
             "/getVerifyCodeImage",
             "/error/*",

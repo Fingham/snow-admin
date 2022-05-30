@@ -1,6 +1,6 @@
 package cn.huanzi.qch.baseadmin.sys.sysauthority.controller;
 
-import cn.huanzi.qch.baseadmin.common.controller.CommonController;
+import cn.huanzi.qch.baseadmin.combase.controller.CommonController;
 import cn.huanzi.qch.baseadmin.sys.sysauthority.pojo.SysAuthority;
 import cn.huanzi.qch.baseadmin.sys.sysauthority.service.SysAuthorityService;
 import cn.huanzi.qch.baseadmin.sys.sysauthority.vo.SysAuthorityVo;

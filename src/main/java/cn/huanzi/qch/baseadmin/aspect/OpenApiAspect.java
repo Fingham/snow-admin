@@ -1,7 +1,6 @@
 package cn.huanzi.qch.baseadmin.aspect;
 
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
-import cn.huanzi.qch.baseadmin.util.ErrorUtil;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
 import cn.huanzi.qch.baseadmin.limiter.RateLimiter;
 import cn.huanzi.qch.baseadmin.util.SysSettingUtil;
 import lombok.extern.slf4j.Slf4j;

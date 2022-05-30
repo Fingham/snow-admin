@@ -1,8 +1,8 @@
-package cn.huanzi.qch.baseadmin.common.service;
+package cn.huanzi.qch.baseadmin.combase.service;
 
 
-import cn.huanzi.qch.baseadmin.common.pojo.PageInfo;
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.pojo.PageInfo;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
 
 import java.util.List;
 

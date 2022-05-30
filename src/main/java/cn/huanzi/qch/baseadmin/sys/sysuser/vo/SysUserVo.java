@@ -1,7 +1,7 @@
 package cn.huanzi.qch.baseadmin.sys.sysuser.vo;
 
 import cn.huanzi.qch.baseadmin.annotation.Like;
-import cn.huanzi.qch.baseadmin.common.pojo.PageCondition;
+import cn.huanzi.qch.baseadmin.combase.pojo.PageCondition;
 import lombok.Data;
 
 import java.io.Serializable;

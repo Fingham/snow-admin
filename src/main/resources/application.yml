@@ -30,7 +30,3 @@ spring:
   #打印SQL
   jpa:
     show-sql: true
-
-#是否需要输入验证码
-captcha:
-  enable: false

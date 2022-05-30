@@ -1,8 +1,7 @@
 package cn.huanzi.qch.baseadmin.sys.sysshortcutmenu.service;
 
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
-import cn.huanzi.qch.baseadmin.common.service.CommonServiceImpl;
-import cn.huanzi.qch.baseadmin.sys.sysmenu.vo.SysMenuVo;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.service.CommonServiceImpl;
 import cn.huanzi.qch.baseadmin.sys.sysshortcutmenu.pojo.SysShortcutMenu;
 import cn.huanzi.qch.baseadmin.sys.sysshortcutmenu.repository.SysShortcutMenuRepository;
 import cn.huanzi.qch.baseadmin.sys.sysshortcutmenu.vo.SysShortcutMenuVo;
@@ -11,12 +10,9 @@ import cn.huanzi.qch.baseadmin.util.MenuUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.StringUtils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 @Service

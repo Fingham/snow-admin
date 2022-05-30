@@ -1,7 +1,7 @@
 package cn.huanzi.qch.baseadmin.sys.sysauthority.service;
 
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
-import cn.huanzi.qch.baseadmin.common.service.CommonServiceImpl;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.service.CommonServiceImpl;
 import cn.huanzi.qch.baseadmin.eventlistener.eventsource.SecurityMetadataSourceEventSource;
 import cn.huanzi.qch.baseadmin.sys.sysauthority.pojo.SysAuthority;
 import cn.huanzi.qch.baseadmin.sys.sysauthority.repository.SysAuthorityRepository;

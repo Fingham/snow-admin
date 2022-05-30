@@ -1,6 +1,6 @@
 package cn.huanzi.qch.baseadmin.openapi.service;
 
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
 import org.springframework.stereotype.Service;
 
 @Service

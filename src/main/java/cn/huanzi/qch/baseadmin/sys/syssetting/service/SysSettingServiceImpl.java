@@ -1,7 +1,7 @@
 package cn.huanzi.qch.baseadmin.sys.syssetting.service;
 
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
-import cn.huanzi.qch.baseadmin.common.service.CommonServiceImpl;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.service.CommonServiceImpl;
 import cn.huanzi.qch.baseadmin.sys.syssetting.pojo.SysSetting;
 import cn.huanzi.qch.baseadmin.sys.syssetting.repository.SysSettingRepository;
 import cn.huanzi.qch.baseadmin.sys.syssetting.vo.SysSettingVo;

@@ -1,4 +1,4 @@
-package cn.huanzi.qch.baseadmin.common.repository;
+package cn.huanzi.qch.baseadmin.combase.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
@@ -11,6 +11,6 @@ import org.springframework.data.repository.NoRepositoryBean;
  * @param <T> id主键类型
  */
 @NoRepositoryBean
-public interface CommonRepository<E,T> extends JpaRepository<E,T>, JpaSpecificationExecutor<E> {
+public interface CommonJpaRepository<E,T> extends JpaRepository<E,T>, JpaSpecificationExecutor<E> {
 
 }

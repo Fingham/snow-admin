@@ -1,8 +1,8 @@
 package cn.huanzi.qch.baseadmin.sys.sysuser.service;
 
-import cn.huanzi.qch.baseadmin.common.pojo.PageInfo;
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
-import cn.huanzi.qch.baseadmin.common.service.CommonServiceImpl;
+import cn.huanzi.qch.baseadmin.combase.pojo.PageInfo;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.service.CommonServiceImpl;
 import cn.huanzi.qch.baseadmin.sys.sysshortcutmenu.repository.SysShortcutMenuRepository;
 import cn.huanzi.qch.baseadmin.sys.sysshortcutmenu.service.SysShortcutMenuService;
 import cn.huanzi.qch.baseadmin.sys.sysshortcutmenu.vo.SysShortcutMenuVo;
@@ -18,7 +18,6 @@ import cn.huanzi.qch.baseadmin.util.SqlUtil;
 import cn.huanzi.qch.baseadmin.util.SysSettingUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;

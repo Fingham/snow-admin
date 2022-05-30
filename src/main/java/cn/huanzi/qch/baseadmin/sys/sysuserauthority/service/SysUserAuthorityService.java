@@ -1,7 +1,7 @@
 package cn.huanzi.qch.baseadmin.sys.sysuserauthority.service;
 
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
-import cn.huanzi.qch.baseadmin.common.service.CommonService;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.service.CommonService;
 import cn.huanzi.qch.baseadmin.sys.sysuserauthority.pojo.SysUserAuthority;
 import cn.huanzi.qch.baseadmin.sys.sysuserauthority.vo.SysUserAuthorityVo;
 

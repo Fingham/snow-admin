@@ -1,6 +1,6 @@
 package cn.huanzi.qch.baseadmin.sys.syssetting.controller;
 
-import cn.huanzi.qch.baseadmin.common.controller.CommonController;
+import cn.huanzi.qch.baseadmin.combase.controller.CommonController;
 import cn.huanzi.qch.baseadmin.sys.syssetting.pojo.SysSetting;
 import cn.huanzi.qch.baseadmin.sys.syssetting.service.SysSettingService;
 import cn.huanzi.qch.baseadmin.sys.syssetting.vo.SysSettingVo;

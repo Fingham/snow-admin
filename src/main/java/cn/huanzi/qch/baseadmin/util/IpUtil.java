@@ -1,8 +1,6 @@
 package cn.huanzi.qch.baseadmin.util;
 
-import cn.huanzi.qch.baseadmin.common.pojo.IpVo;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import cn.huanzi.qch.baseadmin.combase.pojo.IpVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 
@@ -12,7 +10,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 
 /**
  * IP工具类

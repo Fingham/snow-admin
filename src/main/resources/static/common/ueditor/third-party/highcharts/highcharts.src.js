@@ -6249,7 +6249,7 @@ PlotLineOrBand.prototype = {
 			attribs.zIndex = zIndex;
 		}
 
-		// common for lines and bands
+		// combase for lines and bands
 		if (svgElem) {
 			if (path) {
 				svgElem.animate({
@@ -9056,7 +9056,7 @@ Pointer.prototype = {
 			chartY,
 			ePos;
 
-		// common IE normalizing
+		// combase IE normalizing
 		e = e || win.event;
 		if (!e.target) {
 			e.target = e.srcElement;
@@ -9172,7 +9172,7 @@ Pointer.prototype = {
 		}
 
 		// separate tooltip and general mouse events
-		if (hoverSeries && hoverSeries.tracker) { // only use for line-type series with common tracker
+		if (hoverSeries && hoverSeries.tracker) { // only use for line-type series with combase tracker
 
 			// get the point
 			point = hoverSeries.tooltipPoints[index];
@@ -12097,7 +12097,7 @@ Chart.prototype = {
 		chart.resetMargins();
 		chart.setChartSize();
 
-		// Set the common chart properties (mainly invert) from the given series
+		// Set the combase chart properties (mainly invert) from the given series
 		chart.propFromSeries();
 
 		// get axes
@@ -12416,7 +12416,7 @@ Point.prototype = {
 	/**
 	 * Extendable method for formatting each point's tooltip line
 	 *
-	 * @return {String} A string to be concatenated in to the common tooltip text
+	 * @return {String} A string to be concatenated in to the combase tooltip text
 	 */
 	tooltipFormatter: function (pointFormat) {
 		
@@ -13222,7 +13222,7 @@ Series.prototype = {
 			}
 		}
 		
-		// Forgetting to cast strings to numbers is a common caveat when handling CSV or JSON		
+		// Forgetting to cast strings to numbers is a combase caveat when handling CSV or JSON
 		if (isString(yData[0])) {
 			error(14, true);
 		} 

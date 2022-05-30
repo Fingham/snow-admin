@@ -1,6 +1,6 @@
 package cn.huanzi.qch.baseadmin.util;
 
-import cn.huanzi.qch.baseadmin.common.pojo.MonitorVo;
+import cn.huanzi.qch.baseadmin.combase.pojo.MonitorVo;
 import com.sun.management.OperatingSystemMXBean;
 import lombok.extern.slf4j.Slf4j;
 import oshi.SystemInfo;

@@ -1,10 +1,10 @@
-package cn.huanzi.qch.baseadmin.common.controller;
+package cn.huanzi.qch.baseadmin.combase.controller;
 
 import cn.huanzi.qch.baseadmin.annotation.Decrypt;
 import cn.huanzi.qch.baseadmin.annotation.Encrypt;
-import cn.huanzi.qch.baseadmin.common.pojo.PageInfo;
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
-import cn.huanzi.qch.baseadmin.common.service.CommonService;
+import cn.huanzi.qch.baseadmin.combase.pojo.PageInfo;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.service.CommonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +23,7 @@ import java.util.List;
 public class CommonController<V, E, T> {
 
     @Autowired
+    @SuppressWarnings("all")
     private CommonService<V, E, T> commonService;
 
     /*

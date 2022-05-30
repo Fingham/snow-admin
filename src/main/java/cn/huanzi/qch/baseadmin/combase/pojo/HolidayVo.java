@@ -1,4 +1,4 @@
-package cn.huanzi.qch.baseadmin.common.pojo;
+package cn.huanzi.qch.baseadmin.combase.pojo;
 
 import lombok.Data;
 

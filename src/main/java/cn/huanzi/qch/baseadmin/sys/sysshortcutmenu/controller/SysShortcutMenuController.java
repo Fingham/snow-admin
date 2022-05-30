@@ -1,6 +1,6 @@
 package cn.huanzi.qch.baseadmin.sys.sysshortcutmenu.controller;
 
-import cn.huanzi.qch.baseadmin.common.controller.CommonController;
+import cn.huanzi.qch.baseadmin.combase.controller.CommonController;
 import cn.huanzi.qch.baseadmin.sys.sysshortcutmenu.pojo.SysShortcutMenu;
 import cn.huanzi.qch.baseadmin.sys.sysshortcutmenu.service.SysShortcutMenuService;
 import cn.huanzi.qch.baseadmin.sys.sysshortcutmenu.vo.SysShortcutMenuVo;

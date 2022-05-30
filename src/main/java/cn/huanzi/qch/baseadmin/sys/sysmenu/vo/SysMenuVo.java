@@ -1,10 +1,9 @@
 package cn.huanzi.qch.baseadmin.sys.sysmenu.vo;
 
-import cn.huanzi.qch.baseadmin.common.pojo.PageCondition;
+import cn.huanzi.qch.baseadmin.combase.pojo.PageCondition;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 

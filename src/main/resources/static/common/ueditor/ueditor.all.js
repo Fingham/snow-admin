@@ -23965,7 +23965,7 @@ UE.plugin.register('autosave', function (){
                 if ( me.key ) {
                     key = me.key + _suffix;
                 } else {
-                    key = ( me.container.parentNode.id || 'ue-common' ) + _suffix;
+                    key = ( me.container.parentNode.id || 'ue-combase' ) + _suffix;
                 }
 
                 //页面地址+编辑器ID 保持唯一

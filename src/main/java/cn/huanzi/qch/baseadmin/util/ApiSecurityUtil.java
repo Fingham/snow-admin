@@ -1,6 +1,6 @@
 package cn.huanzi.qch.baseadmin.util;
 
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.web.context.request.RequestContextHolder;

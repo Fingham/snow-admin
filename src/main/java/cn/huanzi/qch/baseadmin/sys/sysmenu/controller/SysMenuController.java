@@ -2,8 +2,8 @@ package cn.huanzi.qch.baseadmin.sys.sysmenu.controller;
 
 import cn.huanzi.qch.baseadmin.annotation.Decrypt;
 import cn.huanzi.qch.baseadmin.annotation.Encrypt;
-import cn.huanzi.qch.baseadmin.common.controller.CommonController;
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.controller.CommonController;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
 import cn.huanzi.qch.baseadmin.sys.sysmenu.pojo.SysMenu;
 import cn.huanzi.qch.baseadmin.sys.sysmenu.service.SysMenuService;
 import cn.huanzi.qch.baseadmin.sys.sysmenu.vo.SysMenuVo;

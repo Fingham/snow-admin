@@ -2,9 +2,9 @@ package cn.huanzi.qch.baseadmin.sys.sysuser.controller;
 
 import cn.huanzi.qch.baseadmin.annotation.Decrypt;
 import cn.huanzi.qch.baseadmin.annotation.Encrypt;
-import cn.huanzi.qch.baseadmin.common.controller.CommonController;
-import cn.huanzi.qch.baseadmin.common.pojo.PageInfo;
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.controller.CommonController;
+import cn.huanzi.qch.baseadmin.combase.pojo.PageInfo;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
 import cn.huanzi.qch.baseadmin.sys.sysuser.pojo.SysUser;
 import cn.huanzi.qch.baseadmin.sys.sysuser.service.SysUserService;
 import cn.huanzi.qch.baseadmin.sys.sysuser.vo.SysUserVo;

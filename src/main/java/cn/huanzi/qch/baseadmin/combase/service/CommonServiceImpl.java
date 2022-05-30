@@ -1,9 +1,9 @@
-package cn.huanzi.qch.baseadmin.common.service;
+package cn.huanzi.qch.baseadmin.combase.service;
 
-import cn.huanzi.qch.baseadmin.common.pojo.PageCondition;
-import cn.huanzi.qch.baseadmin.common.pojo.PageInfo;
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
-import cn.huanzi.qch.baseadmin.common.repository.CommonRepository;
+import cn.huanzi.qch.baseadmin.combase.pojo.PageCondition;
+import cn.huanzi.qch.baseadmin.combase.pojo.PageInfo;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.repository.CommonJpaRepository;
 import cn.huanzi.qch.baseadmin.util.CopyUtil;
 import cn.huanzi.qch.baseadmin.util.ErrorUtil;
 import cn.huanzi.qch.baseadmin.util.UUIDUtil;
@@ -37,8 +37,9 @@ public class CommonServiceImpl<V, E, T> implements CommonService<V, E, T> {
 
     private Class<E> entityClass;//实体类
 
+    @SuppressWarnings("all")
     @Autowired
-    private CommonRepository<E, T> commonRepository;//注入实体类仓库
+    private CommonJpaRepository<E, T> commonJpaRepository;//注入实体类仓库
 
     public CommonServiceImpl() {
         Type[] types = ((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments();
@@ -54,19 +55,19 @@ public class CommonServiceImpl<V, E, T> implements CommonService<V, E, T> {
         }
         PageCondition pageCondition = (PageCondition) entityVo;
         //先entityVo转entity，再调用findAll（传多一个分页参数），结果集再转回entityVo
-        return Result.of(PageInfo.of(commonRepository.findAll(Example.of(CopyUtil.copy(entityVo, entityClass)), pageCondition.getPageable()), entityVoClass));
+        return Result.of(PageInfo.of(commonJpaRepository.findAll(Example.of(CopyUtil.copy(entityVo, entityClass)), pageCondition.getPageable()), entityVoClass));
     }
 
     @Override
     public Result<List<V>> list(V entityVo) {
         //先entityVo转entity，再调用findAll，结果集再转回entityVo
-        return Result.of(CopyUtil.copyList(commonRepository.findAll(Example.of(CopyUtil.copy(entityVo, entityClass))), entityVoClass));
+        return Result.of(CopyUtil.copyList(commonJpaRepository.findAll(Example.of(CopyUtil.copy(entityVo, entityClass))), entityVoClass));
     }
 
     @Override
     public Result<V> get(T id) {
         //findById返回Optional<T>，再获取entity转成entityVo
-        return commonRepository.findById(id).map(e -> Result.of(CopyUtil.copy(e, entityVoClass))).orElseGet(() -> Result.of(null, false, "ID不存在！"));
+        return commonJpaRepository.findById(id).map(e -> Result.of(CopyUtil.copy(e, entityVoClass))).orElseGet(() -> Result.of(null, false, "ID不存在！"));
     }
 
     @Override
@@ -98,7 +99,7 @@ public class CommonServiceImpl<V, E, T> implements CommonService<V, E, T> {
                 if (field.isAnnotationPresent(Id.class)) {
                     if(!StringUtils.isEmpty(fieldValue)){
                         //如果Id主键不为空，则为更新
-                        Optional<E> one = commonRepository.findById((T) fieldValue);
+                        Optional<E> one = commonJpaRepository.findById((T) fieldValue);
                         if (one.isPresent()) {
                             entityFull = one.get();
                         }
@@ -142,13 +143,13 @@ public class CommonServiceImpl<V, E, T> implements CommonService<V, E, T> {
             log.error(ErrorUtil.errorInfoToString(e));
         }
 
-        E e = commonRepository.save(entityFull);
+        E e = commonJpaRepository.save(entityFull);
         return Result.of(CopyUtil.copy(e, entityVoClass));
     }
 
     @Override
     public Result<T> delete(T id) {
-        commonRepository.deleteById(id);
+        commonJpaRepository.deleteById(id);
         return Result.of(id);
     }
 }

@@ -1,6 +1,6 @@
 package cn.huanzi.qch.baseadmin.user.service;
 
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
 import cn.huanzi.qch.baseadmin.sys.sysuser.vo.SysUserVo;
 
 public interface UserService {

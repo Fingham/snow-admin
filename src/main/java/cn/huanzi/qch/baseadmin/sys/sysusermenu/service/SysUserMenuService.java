@@ -1,7 +1,7 @@
 package cn.huanzi.qch.baseadmin.sys.sysusermenu.service;
 
-import cn.huanzi.qch.baseadmin.common.pojo.Result;
-import cn.huanzi.qch.baseadmin.common.service.CommonService;
+import cn.huanzi.qch.baseadmin.combase.pojo.Result;
+import cn.huanzi.qch.baseadmin.combase.service.CommonService;
 import cn.huanzi.qch.baseadmin.sys.sysmenu.vo.SysMenuVo;
 import cn.huanzi.qch.baseadmin.sys.sysusermenu.pojo.SysUserMenu;
 import cn.huanzi.qch.baseadmin.sys.sysusermenu.vo.SysUserMenuVo;

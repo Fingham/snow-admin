@@ -97,7 +97,7 @@ public class AutoGenerator {
         stringBuilder.append(
                 "package " + filePackage.replaceAll("\\\\", ".") + "vo;\n" +
                         "\n" +
-                        "import "+ basePackage.replaceAll("\\\\", ".") +" common.pojo.PageCondition;"+
+                        "import "+ basePackage.replaceAll("\\\\", ".") +" combase.pojo.PageCondition;"+
                         "import lombok.Data;\n" +
                         "import java.io.Serializable;\n" +
                         "import java.util.Date;\n" +
@@ -130,7 +130,7 @@ public class AutoGenerator {
         stringBuilder.append(
                 "package " + filePackage.replaceAll("\\\\", ".") + "repository;\n" +
                         "\n" +
-                        "import " + basePackage.replaceAll("\\\\", ".") + "common.repository.*;\n" +
+                        "import " + basePackage.replaceAll("\\\\", ".") + "combase.repository.*;\n" +
                         "import " + filePackage.replaceAll("\\\\", ".") + "pojo." + StringUtil.captureName(StringUtil.camelCaseName(tableName)) + ";\n" +
                         "import org.springframework.stereotype.Repository;\n" +
                         "\n" +
@@ -159,7 +159,7 @@ public class AutoGenerator {
         stringBuilder.append(
                 "package " + filePackage.replaceAll("\\\\", ".") + "service;\n" +
                         "\n" +
-                        "import " + basePackage.replaceAll("\\\\", ".") + "common.service.*;\n" +
+                        "import " + basePackage.replaceAll("\\\\", ".") + "combase.service.*;\n" +
                         "import " + filePackage.replaceAll("\\\\", ".") + "pojo." + StringUtil.captureName(StringUtil.camelCaseName(tableName)) + ";\n" +
                         "import " + filePackage.replaceAll("\\\\", ".") + "vo." + StringUtil.captureName(StringUtil.camelCaseName(tableName)) + "Vo;\n" +
                         "\n" +
@@ -175,7 +175,7 @@ public class AutoGenerator {
         stringBuilder1.append(
                 "package " + filePackage.replaceAll("\\\\", ".") + "service;\n" +
                         "\n" +
-                        "import " + basePackage.replaceAll("\\\\", ".") + "common.service.*;\n" +
+                        "import " + basePackage.replaceAll("\\\\", ".") + "combase.service.*;\n" +
                         "import " + filePackage.replaceAll("\\\\", ".") + "pojo." + StringUtil.captureName(StringUtil.camelCaseName(tableName)) + ";\n" +
                         "import " + filePackage.replaceAll("\\\\", ".") + "vo." + StringUtil.captureName(StringUtil.camelCaseName(tableName)) + "Vo;\n" +
                         "import " + filePackage.replaceAll("\\\\", ".") + "repository." + StringUtil.captureName(StringUtil.camelCaseName(tableName)) + "Repository;\n" +
@@ -218,7 +218,7 @@ public class AutoGenerator {
         stringBuilder.append(
                 "package " + filePackage.replaceAll("\\\\", ".") + "controller;\n" +
                         "\n" +
-                        "import " + basePackage.replaceAll("\\\\", ".") + "common.controller.*;\n" +
+                        "import " + basePackage.replaceAll("\\\\", ".") + "combase.controller.*;\n" +
                         "import " + filePackage.replaceAll("\\\\", ".") + "pojo." + StringUtil.captureName(StringUtil.camelCaseName(tableName)) + ";\n" +
                         "import " + filePackage.replaceAll("\\\\", ".") + "vo." + StringUtil.captureName(StringUtil.camelCaseName(tableName)) + "Vo;\n" +
                         "import " + filePackage.replaceAll("\\\\", ".") + "service." + StringUtil.captureName(StringUtil.camelCaseName(tableName)) + "Service;\n" +

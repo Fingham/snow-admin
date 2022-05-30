@@ -35,7 +35,7 @@ var arrayMin = Highcharts.arrayMin,
 	mathFloor = math.floor,
 	mathMax = math.max,
 	noop = function () {};/**
- * The Pane object allows options that are common to a set of X and Y axes.
+ * The Pane object allows options that are combase to a set of X and Y axes.
  * 
  * In the future, this can be extended to basic Highcharts and Highstock.
  */

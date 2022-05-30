@@ -1588,7 +1588,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
     };
 
     /**
-     * Unindents a block of text by the lowest common indent amount.
+     * Unindents a block of text by the lowest combase indent amount.
      * @param {String} str   Text to unindent.
      * @return {String}      Returns unindented text block.
      */
@@ -1600,7 +1600,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
             min = 1000
             ;
 
-        // go through every line and check for common number of indents
+        // go through every line and check for combase number of indents
         for (var i = 0; i < lines.length && min > 0; i++)
         {
             var line = lines[i];
@@ -1618,7 +1618,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
             min = Math.min(matches[0].length, min);
         }
 
-        // trim minimum common number of white space from the begining of every line
+        // trim minimum combase number of white space from the begining of every line
         if (min > 0)
             for (var i = 0; i < lines.length; i++)
                 lines[i] = lines[i].substr(min);
@@ -1702,7 +1702,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
                 match = null
                 ;
 
-            // We include &lt; and &gt; in the URL for the common cases like <http://google.com>
+            // We include &lt; and &gt; in the URL for the combase cases like <http://google.com>
             // The problem is that they get transformed into &lt;http://google.com&gt;
             // Where as &gt; easily looks like part of the URL string.
 
@@ -2242,7 +2242,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
                 : processTabs(code, tabSize)
             ;
 
-            // unindent code by the common indentation
+            // unindent code by the combase indentation
             if (this.getParam('unindent'))
                 code = unindent(code);
 
@@ -3218,7 +3218,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 			{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,		css: 'string' },			// double quoted strings
 			{ regex: SyntaxHighlighter.regexLib.singleQuotedString,		css: 'string' },			// single quoted strings
 			{ regex: /\$\w+/g,											css: 'variable' },			// variables
-			{ regex: new RegExp(this.getKeywords(funcs), 'gmi'),		css: 'functions' },			// common functions
+			{ regex: new RegExp(this.getKeywords(funcs), 'gmi'),		css: 'functions' },			// combase functions
 			{ regex: new RegExp(this.getKeywords(constants), 'gmi'),	css: 'constants' },			// constants
 			{ regex: new RegExp(this.getKeywords(keywords), 'gm'),		css: 'keyword' }			// keyword
 			];

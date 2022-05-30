@@ -1,6 +1,6 @@
 package cn.huanzi.qch.baseadmin.sys.syssetting.service;
 
-import cn.huanzi.qch.baseadmin.common.service.*;
+import cn.huanzi.qch.baseadmin.combase.service.*;
 import cn.huanzi.qch.baseadmin.sys.syssetting.pojo.SysSetting;
 import cn.huanzi.qch.baseadmin.sys.syssetting.vo.SysSettingVo;
 

@@ -1,6 +1,6 @@
 package cn.huanzi.qch.baseadmin.util;
 
-import cn.huanzi.qch.baseadmin.common.pojo.HolidayVo;
+import cn.huanzi.qch.baseadmin.combase.pojo.HolidayVo;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.BufferedReader;
