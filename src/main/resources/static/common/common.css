@@ -2,3 +2,13 @@ body, html {
     margin: 0;
     padding: 0;
 }
+/* -----------------------------*/
+/*鼠标样式动画*/
+body{
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    cursor: url(https://files.cnblogs.com/files/monster-jian/cursor.ico),auto;
+    /*cursor: url("../cursor.ico"),auto;*/
+}
+/* -----------------------------*/

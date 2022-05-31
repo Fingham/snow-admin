@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .mask {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            background-color: aliceblue;
+            border-radius: 5px;
+            z-index: 99;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .modal .title {
+            height: 30px;
+            box-sizing: content-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 0 16px;
+        }
+        .title .close {
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            line-height: 20px;
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .title .close:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .modal .main {
+            box-sizing: border-box;
+            padding: 16px;
+            height: calc(100% - 80px);
+        }
+
+        .modal .footer {
+            height: 50px;
+            text-align: right;
+            box-sizing: border-box;
+            padding-right: 16px;
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .footer button {
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border: none;
+            border-radius: 5px;
+            margin-left: 8px;
+        }
+
+        .footer button:hover {
+            background-color: #49a4ff;
+        }
+
+    </style>
+    <script src="../common/jquery/jquery.js"></script>
+    <script>
+        function Modal(options) {
+            
+            options = Object.assign({
+                title: '标题',
+                backgroundColor: '#fff', // 背景颜色
+                mask: true, //是否显示遮罩层,
+                content: '弹框内容',
+                cancelText: '取消',//取消按钮文字
+                okText: '确认', // 确认按钮文字,
+                width: 400, //对话框的宽度
+                onCancel: this.closeModal, //取消按钮回调，默认是关闭弹框
+                onOk: () => {
+                    console.log('你点击了确认')
+                }, // 确认按钮回调
+            }, options)
+            this.options = options
+
+            // 创建遮罩层
+            function createMask() {
+                let mask = document.createElement('div')
+                mask.className = 'mask'
+                document.body.appendChild(mask)
+            }
+
+            // 创建modal弹框
+            function createModal() {
+                
+                let modal = document.createElement('div'),
+                    titleDom = document.createElement('div'),
+                    main = document.createElement('div'),
+                    footer = document.createElement('div'),
+                    btn_l = document.createElement('button'),
+                    btn_r = document.createElement('button');
+
+                let { title, content, cancelText, okText, width, onCancel, onOk, backgroundColor
+                } = this.options
+                modal.className = 'modal'
+                modal.style.width = width + 'px'
+                modal.style.backgroundColor = backgroundColor
+
+                titleDom.className = 'title'
+                let closeIcon = document.createElement('span')
+                closeIcon.addEventListener('click', closeModal.bind(this))
+                closeIcon.className = 'close'
+                closeIcon.innerHTML = 'x'
+                titleDom.innerHTML = `<span>${title}</span>`
+                titleDom.appendChild(closeIcon)
+
+                main.className = 'main'
+                main.innerHTML = content
+
+                footer.className = 'footer'
+                btn_l.innerHTML = '取消'
+                btn_r.innerHTML = '确认'
+                footer.appendChild(btn_l)
+                footer.appendChild(btn_r)
+
+                onCancel = onCancel ? onCancel : this.closeModal
+                btn_l.addEventListener('click', onCancel.bind(this))
+                btn_r.addEventListener('click', onOk)
+
+                modal.appendChild(titleDom)
+                modal.appendChild(main)
+                modal.appendChild(footer)
+
+                document.body.appendChild(modal)
+            }
+
+            // 关闭弹框
+            function closeModal(ev) {
+                // ev 在点击确定是没有值，可能方式不对
+                // let target = ev.path[2]
+                let target = document.querySelector('div.modal')
+                let { mask } = this.options
+                mask ? document.body.removeChild(document.querySelector('.mask')) : null
+                document.body.removeChild(target)
+            }
+
+            // 初始化
+            function init() {
+                let { mask } = this.options
+                console.log("初始化自定义弹框:", mask);
+                mask ? createMask() : null
+                this.createModal()
+            }
+
+            Modal.prototype.init = init
+            Modal.prototype.createModal = createModal
+            Modal.prototype.closeModal = closeModal
+
+            // 执行初始化方法
+            this.init()
+        }
+
+    </script>
+</head>
+<body>
+    《自定义原生弹框》
+    <button onclick="openModal()">打开自定义弹框</button>
+</body>
+    <script>
+        let modal = new Modal({
+            mask: false,
+            title: '我是第二个',
+            content: `<h1>模态框呀模态框</h1><h1>模态框呀模态框</h1><h1>模态框呀模态框</h1><h1>模态框呀模态框</h1>`,
+            onOk: onOk
+        })
+        function openModal(){
+            modal.createModal();
+        }
+
+        function onOk(){
+            console.log("我已经确认过了...");
+            modal.closeModal({path:["", "", "div.modal"]})
+        }
+
+        // function closeModal(){
+        //     modal.closeModal()
+        // }
+
+    </script>
+    <script content="背景的动态线状粒子特效" src="../common/demo/m1.js" ></script>
+    <script content="点击爱心特效,需要jquery" type="application/javascript" src="../common/demo/m2.js" ></script>
+</html>

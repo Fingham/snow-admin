@@ -153,7 +153,7 @@
     |   |       |   |   |-- ueditor
     |   |       |   |       |-- ...
     |   |       |   |-- sql     【sql脚本】
-    |   |       |   |   |-- base_admin.sql
+    |   |       |   |   |-- snow_admin.sql
     |   |       |   |-- sys     【系统管理功能的js/css脚本】
     |   |       |   |   |-- authority
     |   |       |   |   |   |-- css
